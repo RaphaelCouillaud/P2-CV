@@ -1,0 +1,387 @@
+@font-face 
+{
+	font-family: 'Electrolize';
+	src : url('Electrolize.eot') format('eot'),
+	src : url('Electrolize.woff') format('woff'),
+	src : url('Electrolize.ttf') format('ttf');
+	src : url('Electrolize.svg') format('svg');
+}
+
+@font-face 
+{
+	font-family: 'Russo One';
+	src : url('Russo One.eot') format('eot'),
+	src : url('Russo One.woff') format('woff'),
+	src : url('Russo One.ttf') format('ttf');
+	src : url('Russo One.svg') format('svg');
+}
+body
+{
+    font-family: Electrolize, 'Trebuchet MS', Arial, Helvetica, sans-serif;	
+    text-align: start;    
+    width: 100%;
+    margin: 0; 
+    display: block;
+    border: 2px solid rgba(0, 0, 0, 0.2);     
+}
+header
+{
+    display: flex;
+    width: 100%;    
+}
+.nom
+{
+    display: flex;
+    flex-direction: column;
+    /*--Largeur et marges à respecter pour le bloc droite--*/
+    width: 67%;
+    margin-left: 50px;
+    margin-right: 50px;    
+}
+header h1
+{
+	font-family: russo one, Impact, Geneva, sans-serif;
+	font-size: 2.8em;
+    margin-top: 100px;
+    margin-bottom: 0.1em;    
+}
+header h2
+{
+    font-size: 1.8em;
+    margin-top: 0.1em;  
+}
+span
+{
+	color: #CC8E13;
+}
+header strong
+{
+	text-decoration: underline #CC8E13;
+}
+.photocv
+{
+    display: flex;
+    justify-content: center;
+    /*--Largeur à respecter pour le bloc gauche--*/
+    width: 33%;
+    background-color: #CC8E13;      
+}
+#desscv
+{
+    align-content: center;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    width: 12em;
+    height: 12em;
+    margin-top: 50px;
+    margin-bottom: 50px;    
+}
+main
+{
+    display: flex;
+    width: 100%;
+}
+
+/*--bloc gauche--*/
+aside
+{
+    width: 33%;
+    background-color: #CC8E13;
+    color: white;
+    position: relative;     
+}
+aside h3
+{
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 1.8em;
+    font-family: russo one, Impact, Geneva, sans-serif; 
+    margin-top: 0;
+}
+#elementscontact, #elementsapropos
+{
+	margin: 0 50px 25px 50px;
+    text-align: left;
+}
+#elementsapropos p
+{
+    text-align: justify;
+}
+#loisirs
+/*--bloc placé en bas en position absolute--*/
+{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+#elementsloisirs
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+#elementsloisirs i
+{
+	 color: white;
+	 border: 3px solid white;
+	 border-radius: 50%;
+	 padding: 8px 8px 8px 8px;
+	 font-size: 45px;	 
+	 margin: 25px 15px 25px 15px;
+}
+
+/*--bloc droite--*/
+article
+{
+    display: flex;
+    flex-direction: column;
+    width: 67%;
+    margin-left: 50px;
+    margin-right: 50px;    
+}
+article h3
+{
+    font-size: 1.8em;
+    font-family: russo one, Impact, Geneva, sans-serif;
+    border-bottom: medium solid #CC8E13; 
+    padding-bottom: 10px;   
+}
+article h4
+{
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+article i
+{
+	color: #CC8E13;
+}
+.formation, .experience
+{
+	display: flex;	
+	width: 100%;
+	margin-top: 1em;
+}
+.datesformation, .datesexperience
+{
+	display: flex;
+	width: 30%;
+	text-align: left;	
+	margin-right: 15px;
+	font-size: 1em;		
+}	
+.descriptionformation, .descriptionexperience
+{
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+}
+.far, .fas 
+/*--puces alignées verticalement--*/
+{
+	display: inline-block;
+	margin-right: 15px;	
+}	
+.formation i, .experience i
+{
+	font-size: 0.8em;
+	margin-top: 5px;
+}
+.formation p, h4, h5
+{
+    margin-top: 0;
+    margin-bottom: 20px;	
+}
+.experience p, h4,h5
+{
+	margin-top: 0;
+    text-align: left;
+    margin-bottom: 20px;    
+}
+.formation h5, .experience h5
+{
+	font-size: 1.1em;
+}
+#nomsrecommandations
+{    
+    display: flex;    
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 55px;  
+    line-height: 1.5em;  
+}	
+#nomsrecommandations h4
+{
+   font-size: 1.2em;
+   margin-bottom: 5px;
+}
+#nomsrecommandations p
+{
+    margin-top: 0;
+}
+#recommandation1, #recommandation2
+{
+    width: 50%;
+}
+#recommandations .fas
+{
+    color: #CC8E13;
+}
+
+/*--Responsive Tablettes--*/
+/*--Sur les écrans, quand la largeur de la fenêtre est comprise entre 768px et 1023px--*/
+@media screen and (min-width: 768px) and (max-width: 1023px)
+{
+    body
+    {
+        width: auto;                         
+    }
+    header
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+    }
+    .photocv
+    {
+        background-color: white;
+        height: 100%;
+        width: auto;
+        margin: 0;
+    }
+    .nom
+    {
+        margin-bottom: 55px;
+        width: auto;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .nom h2
+    {
+        text-align: center;        
+    }
+    header h1
+    {
+	margin-top: 50px;
+    }    
+    #desscv
+    {
+        width: 13em;
+        height: 13em;
+        border: 4px solid #CC8E13;
+        margin-bottom: 20px;        
+    }
+    main
+    {
+        flex-direction: column;
+        width: 100%;        
+    }
+    article h4,h5,p
+	{
+        text-align: center;        
+	}
+	aside
+	{
+        flex-direction: column;
+        width: auto; 
+        font-size: 1.4em;             
+    }
+    article
+    {
+        width: auto;         
+    }
+    #loisirs
+    {
+        position: relative;
+    }
+	#elementsapropos p
+	{
+        text-align: justify;        
+	}
+    #elementsapropos
+    {
+        margin-bottom: 50px;
+    }	
+	.formation, .experience
+	{
+		flex-direction: column;
+		align-items: center;
+		font-size: 1.5em;	
+	}
+	article h3
+	{
+        font-size: 2.5em;
+        text-align: center;
+	}
+	.datesformation, .datesexperience
+	{
+		justify-content: center;
+        width: 100%;
+        margin-right: 0;               
+    }
+    .descriptionformation, .descriptionexperience
+    {
+        width: 100%;              
+    }
+	.descriptionexperience p
+	{
+        text-align: center;
+    }
+    #recommandations h3
+	{
+		font-size: 2.5em;
+	}
+    #nomsrecommandations
+	{
+		flex-direction: column;		
+        font-size: 1.5em;        
+    }
+    #recommandation1, #recommandation2
+    {
+    width: 100%;
+    }
+	#elementsloisirs i
+	{
+		font-size: 3em;
+		border: 4px solid white;		 
+	 	padding: 15px 15px 15px 15px;
+	 }
+	 #elementsloisirs
+	 {
+	 	justify-content: space-around;
+	 }
+}
+
+/*--Responsive smartphones--*/
+/*--Sur tous types d'écrans, quand la largeur de la fenêtre fait au moins 480px--*/
+@media all and (max-device-width: 480px)
+{    
+    .nom
+    {
+        font-size: 2em;
+    }    
+    #desscv
+    {
+        width: 18em;
+        height: 18em;        
+    }    
+	.formation, .experience
+	{
+		font-size: 2.3em;	
+	}
+	article h3
+	{
+        font-size: 3.5em;
+    }
+    #recommandations h3
+	{
+		font-size: 3.5em;
+	}
+    #elementsloisirs i
+	{
+		font-size: 4.5em;
+		border: 5px solid white;		 
+	 	padding: 15px 15px 15px 15px;
+	 }	
+}	    
+        
+   
